@@ -1,7 +1,10 @@
+$background-color: #2c2c2c;
+$title-color : #e2e2e2;
+
 body {
-    background: #2c2c2c;
+    background: $background-color;
     h1 {
-        color: #e2e2e2;
+        color: $title-color;
         text-align: center;
     }
 }

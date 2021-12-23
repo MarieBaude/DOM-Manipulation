@@ -1,2 +1,1 @@
-const slides = document.getElementById('img');
-console.log(slides);
+const slides = document.getElementsByTagName('img');
