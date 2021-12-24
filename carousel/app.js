@@ -12,6 +12,3 @@ function changeSlide () {
 document.querySelector(".next-button").addEventListener("click", function() {
     changeSlide();
 });
-
-
-
