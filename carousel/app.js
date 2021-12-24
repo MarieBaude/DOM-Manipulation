@@ -1,7 +1,12 @@
 const slides = document.querySelector(".slides");
+const slidesCount = slides.childElementCount;
+let sizeMove = -80;
+let move = 0;
 
 function changeSlide () {
-    slides.style.left = '-110vw';
+    move = move + sizeMove
+    console.log(move);
+    slides.style.left = sizeMove + "em";
 }
 
 document.querySelector(".next-button").addEventListener("click", function() {
@@ -9,5 +14,4 @@ document.querySelector(".next-button").addEventListener("click", function() {
 });
 
 
-//tant que compteurImage 
 
