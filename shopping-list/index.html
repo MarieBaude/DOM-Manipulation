@@ -10,14 +10,16 @@
 <body>
     <h1>Shopping list</h1>
     <main>
-        <input type="text" id="input-add-text" />
-        <input type='button' onclick='changeText()' value='Add' />
-        <ul id="shopping-list">
-            <li>Milk</li>
-            <li>Bread</li>
-            <li>Egg</li>
-            <li>Tomato</li>
-        </ul>
+        <form id="formAddText" onclick="addingText()">
+           <input type="text" id="input-add-text" />
+           <button>Add</button>
+            <ul id="shopping-list">
+                <li>Milk</li>
+                <li>Bread</li>
+                <li>Egg</li>
+                <li>Tomato</li>
+            </ul> 
+        </form>
     </main>
 <script src="app.js"></script>
 </body>
