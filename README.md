@@ -1,5 +1,5 @@
 # DOM-Manipulation
-Brief Simplon 
+Brief Simplon CDA
 
 ## Carousel
 Vous devrez créer une page web contenant un petit carousel basique. La page devra contenir au moins :
