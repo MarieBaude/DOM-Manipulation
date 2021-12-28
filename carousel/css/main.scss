@@ -22,7 +22,6 @@ h1 {
 .carousel {
     position: relative;
     overflow: hidden;
-    width: 60em;
     height: 35em;
     .slides {
         display: flex;
@@ -43,5 +42,35 @@ button {
     &:hover {
         background: $secondary-color;
         color: $primary-color;
+    }
+}
+
+@media only screen and (min-width: 0) {
+    .carousel {
+        width: 18em;
+    }
+}
+
+@media only screen and (min-width: 425px) {
+    .carousel {
+        width: 25em;
+    }
+}
+
+@media only screen and (min-width: 585px) {
+    .carousel {
+        width: 35em;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .carousel {
+        width: 45em;
+    }
+}
+
+@media only screen and (min-width: 1142px) {
+    .carousel {
+        width: 60em;
     }
 }
