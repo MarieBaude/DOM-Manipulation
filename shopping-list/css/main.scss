@@ -14,11 +14,11 @@ h1 {
     padding: 1em;
 }
 
-input {
+input:first-child {
     margin: 0 0 1em 1em;
 }
 
-button {
+input:last-of-type {
     cursor: pointer;
 }
 
