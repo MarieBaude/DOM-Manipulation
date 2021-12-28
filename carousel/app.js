@@ -4,7 +4,7 @@ const maxLeft = (slidesCount - 1) * 80 * -1;
 const sizeMove = -80;
 let move = 0;
 
-function changeSlide (next = true) {
+export function changeSlide (next = true) {
     if (next) {
         move += move > maxLeft ? -80 : move * -1;
       } else {

@@ -3,6 +3,10 @@
   "version": "1.0.0",
   "description": "",
   "main": "app.js",
+  "type": "module",
+  "directories": {
+    "test": "test"
+  },
   "scripts": {
     "test": "npx c8 mocha",
     "sass": "sass --watch css/main.scss:css/style.css --style compressed"
