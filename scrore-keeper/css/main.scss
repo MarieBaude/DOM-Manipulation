@@ -5,6 +5,9 @@ $secondary-color : #e2e2e2;
 
 body {
     background: $primary-color;
+    main {
+        margin: 1em;
+    }
 }
 
 h1 {
@@ -13,10 +16,18 @@ h1 {
     padding: 1em;
 }
 
-h1, span {
+h1, span, label {
     color: $secondary-color;
 }
 
-button {
-    cursor: pointer;
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    label, input, button {
+        margin-top: 1em;
+    }
+    button {
+        cursor: pointer;
+    }
 }
