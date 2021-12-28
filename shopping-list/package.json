@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sass": "sass --watch css/main.scss:css/style.css --style compressed"
   },
   "keywords": [],
   "author": "",
@@ -12,5 +13,8 @@
   "dependencies": {
     "c8": "^7.10.0",
     "chai": "^4.3.4"
+  },
+  "devDependencies": {
+    "sass": "^1.45.1"
   }
 }

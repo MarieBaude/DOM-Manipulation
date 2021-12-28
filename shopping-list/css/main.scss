@@ -1,0 +1,29 @@
+@import "reset";
+
+$primary-color: #2c2c2c;
+$secondary-color : #e2e2e2;
+
+body {
+    background: $primary-color;
+}
+
+h1 {
+    color: $secondary-color;
+    text-align: center;
+    font-size: 3em;
+    padding: 1em;
+}
+
+input {
+    margin: 0 0 1em 1em;
+}
+
+button {
+    cursor: pointer;
+}
+
+ul {
+    color: $secondary-color;
+    list-style-type: circle;
+    margin-left: 2em;
+}
