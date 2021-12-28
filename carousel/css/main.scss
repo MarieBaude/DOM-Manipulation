@@ -27,6 +27,7 @@ h1 {
     .slides {
         display: flex;
         position: absolute;
+        transition: 1s ease-in-out all;
     }
 }
 
