@@ -29,5 +29,9 @@ form {
     }
     button {
         cursor: pointer;
+        background: $primary-color;
+        color: $secondary-color;
+        border: 1px solid $secondary-color;
+        padding: 0.5em 1em;
     }
 }

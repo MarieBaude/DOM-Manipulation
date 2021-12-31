@@ -8,16 +8,11 @@
     "test": "test"
   },
   "scripts": {
-    "test": "npx c8 mocha",
     "sass": "sass --watch css/main.scss:css/style.css --style compressed"
   },
   "author": "Marie Baude",
   "license": "ISC",
   "dependencies": {
     "sass": "^1.45.1"
-  },
-  "devDependencies": {
-    "c8": "^7.10.0",
-    "chai": "^4.3.4"
   }
 }
