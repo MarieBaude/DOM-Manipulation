@@ -5,6 +5,7 @@ $secondary-color : #e2e2e2;
 
 body {
     background: $primary-color;
+    color: $secondary-color;
     main {
         margin: 1em;
     }
@@ -14,10 +15,6 @@ h1 {
     text-align: center;
     font-size: 3em;
     padding: 1em;
-}
-
-h1, span, label {
-    color: $secondary-color;
 }
 
 form {
