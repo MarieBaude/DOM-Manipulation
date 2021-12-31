@@ -7,15 +7,12 @@
     "test": "test"
   },
   "scripts": {
-    "test": "npx c8 mocha",
     "sass": "sass --watch css/main.scss:css/style.css --style compressed"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "c8": "^7.10.0",
-    "chai": "^4.3.4",
     "sass": "^1.45.1"
   }
 }

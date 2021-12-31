@@ -5,7 +5,6 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "test": "npx c8 mocha",
     "sass": "sass --watch css/main.scss:css/style.css --style compressed"
   },
   "keywords": [],

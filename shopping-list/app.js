@@ -1,6 +1,6 @@
 let list = document.getElementById('shopping-list');
 
-/*export*/ function addingText() {
+function addingText() {
     let addText = document.getElementById('input-add-text').value;
     let entry = document.createElement('li');
     if (addText.replace(/\s+/, '').length) {
