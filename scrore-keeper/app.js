@@ -48,7 +48,7 @@ function addClickPlayer1 () {
 }
 
 function changeColor () {
-    if ((clicksPlayer1 == score || clicksPlayer2) == score && score != 0) {
+    if ((clicksPlayer1 == score || clicksPlayer2 == score) && score != 0) {
         player1Score.style.color = "green";
     }
 }
