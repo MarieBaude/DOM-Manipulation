@@ -4,7 +4,7 @@
   "description": "Brief Simplon CDA",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "sass": "sass --watch assets/sass/main.scss:assets/sass/style.css --style compressed"
   },
   "repository": {
     "type": "git",
@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/MarieBaude/DOM-Manipulation/issues"
   },
-  "homepage": "https://github.com/MarieBaude/DOM-Manipulation#readme"
+  "homepage": "https://github.com/MarieBaude/DOM-Manipulation#readme",
+  "devDependencies": {
+    "sass": "^1.45.2"
+  }
 }
