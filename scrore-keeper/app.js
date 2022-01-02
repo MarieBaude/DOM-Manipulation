@@ -25,12 +25,12 @@ numInput.addEventListener("change", function() {
 
 player1Button.addEventListener("click", function() {
     addClickPlayer1();
-    compareNum();
+    changeColor();
 });
 
 player2Button.addEventListener("click", function() {
     addClickPlayer2();
-    compareNum();
+    changeColor();
 });
 
 resetButton.addEventListener("click", function() {
@@ -41,8 +41,16 @@ resetButton.addEventListener("click", function() {
 -----------------------------
 */
 function addClickPlayer1 () {
-    clicksPlayer1++;
-    player1Score.innerHTML = clicksPlayer1;
+    while (clicksPlayer1 != score && score != 0) {
+        clicksPlayer1++;
+        player1Score.innerHTML = clicksPlayer1;
+    }
+}
+
+function changeColor () {
+    if ((clicksPlayer1 == score || clicksPlayer2) == score && score != 0) {
+        player1Score.style.color = "green";
+    }
 }
 
 function addClickPlayer2 () {
@@ -65,12 +73,4 @@ function reset () {
     document.querySelector(".input-num").value = "0";
     player1Score.style.color = "#e2e2e2";
     player2Score.style.color = "#e2e2e2";
-}
-
-function compareNum () {
-    if (clicksPlayer1 == score && score != 0) {
-        player1Score.style.color = "green";
-    } else if (clicksPlayer2 == score && score != 0) {
-        player2Score.style.color = "green";
-    }
 }
