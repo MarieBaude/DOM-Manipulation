@@ -13,14 +13,14 @@ let resetButton = document.querySelector(".button-reset");
 
 let clicksPlayer1 = 0;
 let clicksPlayer2 = 0;
+let score = 0;
 
 /* 
 -----------------------------
 */
 
 numInput.addEventListener("change", function() {
-    winnerNum.textContent=this.value;
-    console.log(winnerNum);        
+    addScore();
 });
 
 player1Button.addEventListener("click", function() {
@@ -29,6 +29,10 @@ player1Button.addEventListener("click", function() {
 
 player2Button.addEventListener("click", function() {
     addClickPlayer2();
+});
+
+resetButton.addEventListener("click", function() {
+    reset();
 });
 
 /* FUNCTIONS 
@@ -42,4 +46,19 @@ function addClickPlayer1 () {
 function addClickPlayer2 () {
     clicksPlayer2++;
     player2Score.innerHTML = clicksPlayer2;
+}
+
+function addScore () {
+    score++;
+    winnerNum.textContent = score;
+}
+
+function reset () {
+    clicksPlayer1 = 0;
+    clicksPlayer2 = 0;
+    score = 0;
+    player1Score.innerHTML = clicksPlayer1;
+    player2Score.innerHTML = clicksPlayer2;
+    winnerNum.innerHTML = score;
+    document.querySelector(".input-num").value = "0";
 }

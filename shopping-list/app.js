@@ -1,5 +1,11 @@
+/* VARIABLES 
+-----------------------------
+*/
 let list = document.getElementById('shopping-list');
 
+/* FUNCTIONS 
+-----------------------------
+*/
 function addingText() {
     let addText = document.getElementById('input-add-text').value;
     let entry = document.createElement('li');
