@@ -25,7 +25,6 @@ numInput.addEventListener("change", function() {
 
 player1Button.addEventListener("click", function() {
     addClickPlayer1();
-    comparedValues();
 });
 
 player2Button.addEventListener("click", function() {
@@ -43,12 +42,4 @@ function addClickPlayer1 () {
 function addClickPlayer2 () {
     clicksPlayer2++;
     player2Score.innerHTML = clicksPlayer2;
-}
-
-function comparedValues () {
-    if (clicksPlayer1 === winnerNum) {
-        console.log('yes');
-    } else {
-        console.log('no');
-    }
 }
