@@ -1,0 +1,19 @@
+{
+  "name": "6_projetdom",
+  "version": "1.0.0",
+  "description": "Brief Simplon CDA",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MarieBaude/DOM-Manipulation.git"
+  },
+  "author": "Marie Baude",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MarieBaude/DOM-Manipulation/issues"
+  },
+  "homepage": "https://github.com/MarieBaude/DOM-Manipulation#readme"
+}

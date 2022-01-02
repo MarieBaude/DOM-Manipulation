@@ -1,0 +1,26 @@
+.pv {
+    display: flex;
+    justify-content: space-between;
+    width: 29em;
+    .you-life, .monster-life {
+        background: $heal;
+        width: 10em;
+        height: 4em;
+    }
+}
+
+.action {
+    display: flex;
+    justify-content: center;
+    margin-top: 2em;
+    border: solid $secondary-color 1px;
+    width: 25em;
+    padding: 2em;
+    .new-start-monster {
+        background: $button-start;
+        border: none;
+        color: $primary-color;
+        padding: 0.5em 1em;
+        font-size: 1em;
+    }
+}

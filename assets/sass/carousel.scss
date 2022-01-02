@@ -1,24 +1,3 @@
-@import "reset";
-
-$primary-color: #2c2c2c;
-$secondary-color : #e2e2e2;
-
-body {
-    background: $primary-color;
-    main {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-}
-
-h1 {
-    color: $secondary-color;
-    text-align: center;
-    font-size: 3em;
-    padding: 1em;
-}
-
 .carousel {
     position: relative;
     overflow: hidden;
@@ -31,19 +10,11 @@ h1 {
     }
 }
 
-button {
-    cursor: pointer;
-    color: $secondary-color;
-    border: solid white 1px;
-    font-size: 2em;
+.previous-button, .next-button {
     width: 2em;
     height: 1.3em;
-    background: none;
     margin-top: 0.5em;
-    &:hover {
-        background: $secondary-color;
-        color: $primary-color;
-    }
+    font-size: 2em;
 }
 
 @media only screen and (min-width: 0) {
