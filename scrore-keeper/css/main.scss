@@ -25,6 +25,9 @@ form {
     label, input, button {
         margin-top: 1em;
     }
+    input {
+        font-size: 0.5em;
+    }
     button {
         cursor: pointer;
         background: $primary-color;
