@@ -10,6 +10,10 @@
     }
 }
 
+.button-slides {
+    margin-bottom: 2em;
+}
+
 .previous-button, .next-button {
     width: 2em;
     height: 1.3em;
@@ -43,6 +47,6 @@
 
 @media only screen and (min-width: 1142px) {
     .carousel {
-        width: 60em;
+        width: 55em;
     }
 }

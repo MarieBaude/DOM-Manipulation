@@ -3,8 +3,8 @@
 */
 const slides = document.querySelector(".slides");
 const slidesCount = slides.childElementCount;
-const maxLeft = (slidesCount - 1) * 80 * -1;
-const sizeMove = -80;
+const sizeMove = 70;
+const maxLeft = (slidesCount - 1) * sizeMove * -1;
 let move = 0;
 
 /* 
@@ -23,9 +23,9 @@ document.querySelector(".previous-button").addEventListener("click", function() 
 */
 function changeSlide (next = true) {
   if (next) {
-      move += move > maxLeft ? -80 : move * -1;
+      move += move > maxLeft ? -sizeMove : move * -1;
     } else {
-      move = move < 0 ? move + 80 : maxLeft;
+      move = move < 0 ? move + sizeMove : maxLeft;
     }
     slides.style.left = move + "em";
 }

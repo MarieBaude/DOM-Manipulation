@@ -15,6 +15,7 @@ let clicksPlayer1 = 0;
 let clicksPlayer2 = 0;
 let score = 0;
 
+
 /* 
 -----------------------------
 */
@@ -34,6 +35,7 @@ player2Button.addEventListener("click", function() {
 resetButton.addEventListener("click", function() {
     reset();
 });
+
 
 /* FUNCTIONS 
 -----------------------------
