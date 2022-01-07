@@ -12,10 +12,7 @@
 .action {
     display: flex;
     justify-content: center;
-    margin-top: 2em;
-    border: solid $secondary-color 1px;
-    width: 25em;
-    padding: 2em;
+    @include section-style;
     .button-monster-slayer {
         border: none;
         padding: 0.5em 1em;
@@ -53,4 +50,9 @@
             background: $button-give-up-hover;
         }
     }
+}
+
+.text {
+   @include section-style;
+   display: none;
 }

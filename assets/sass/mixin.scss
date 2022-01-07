@@ -1,0 +1,6 @@
+@mixin section-style {
+    margin-top: 2em;
+    border: solid $secondary-color 1px;
+    width: 25em;
+    padding: 2em;
+}

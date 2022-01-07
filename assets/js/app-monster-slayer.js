@@ -6,6 +6,7 @@ const buttonAttack = document.querySelector('.attack');
 const buttonSpecialAttack = document.querySelector('.special-attack');
 const buttonHeal = document.querySelector('.heal');
 const buttonGiveUP = document.querySelector('.give-up');
+const sectionText = document.querySelector('.text');
 
 
 /* EVENTS
@@ -28,4 +29,5 @@ function appearButton () {
     buttonSpecialAttack.style.display = 'inherit';
     buttonHeal.style.display = 'inherit';
     buttonGiveUP.style.display = 'inherit';
+    sectionText.style.display = 'inherit';
 }
