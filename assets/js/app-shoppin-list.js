@@ -1,24 +1,25 @@
 /* VARIABLES
 -----------------------------
 */
-const list = document.querySelector('.shopping-list');
-const input = document.querySelector('.input-list');
-const buttonAdd = document.querySelector('.add-list');
+let list = document.querySelector('.shopping-list');
+const buttonAdd = document.querySelector('.button-add');
 
 /* 
 -----------------------------
 */
 buttonAdd.addEventListener("click", function() {
-    addingText();
+    addText();
 });
 
 
 /* FUNCTIONS
 -----------------------------
 */
-function addingText() {
+function addText() {
+    let addText = document.querySelector('.input-list').value;
     let li = document.createElement('li');
-    input.appendChild(document.createTextNode(li));
-    list.appendChild(li);
+    if (addText.replace(/\s+/, '').length) {
+        li.appendChild(document.createTextNode(addText));
+        list.appendChild(li);
+    } 
 }
-
