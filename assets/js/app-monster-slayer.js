@@ -16,6 +16,8 @@ const list = document.querySelector('.action-list');
 let playerHP = 100;
 let monsterHP = 100;
 
+
+
 /* EVENTS
 -----------------------------
 */
@@ -32,6 +34,7 @@ buttonAttack.addEventListener('click', function() {
     monsterAttack();
     addLiPlayer();
     addLiMonster();
+    checkWinner();
 });
 
 buttonSpecialAttack.addEventListener('click', function() {
@@ -39,6 +42,8 @@ buttonSpecialAttack.addEventListener('click', function() {
     monsterAttack();
     addLiPlayerSpecial();
     addLiMonster();
+    checkWinner();
+    console.log('player : ' + playerHP, ' - monster : ' + monsterHP);
 });
 
 buttonHeal.addEventListener('click', function() {
@@ -46,12 +51,12 @@ buttonHeal.addEventListener('click', function() {
     monsterAttack();
     addLiPlayerHeal();
     addLiMonster();
+    checkWinner();
 });
 
 /* FUNCTIONS 
 -----------------------------
 */
-
 function appearButton () {
     buttonStart.style.display = 'none';
     buttonAttack.style.display = 'inherit';
@@ -114,7 +119,16 @@ function reset () {
     buttonGiveUP.style.display = 'none';
     sectionText.style.display = 'none';
     buttonStart.style.display = 'inherit';
-    let playerHP = 100;
-    let monsterHP = 100;
+    playerHP = 100;
+    monsterHP = 100;
     list.innerHTML = '';
 }
+
+function checkWinner () {
+    if (playerHP == 0) {
+        alert('perdu');
+    } if (monsterHP == 0) {
+        alert('gagné');
+    } 
+}
+

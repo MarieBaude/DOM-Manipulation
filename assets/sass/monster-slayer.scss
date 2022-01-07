@@ -2,11 +2,19 @@
     display: flex;
     justify-content: space-between;
     width: 29em;
-    .you-life, .monster-life {
-        background: $hp;
+    position: relative;
+    .bar {
         width: 13em;
         height: 2.5em;
-        transition: width 500ms;
+        //transition: width 500ms;
+    }
+    .up-bar {
+        background: $hp-bar;
+        position: absolute;
+    }
+    .under-bar {
+        background: $under-bar;
+        z-index: 1;
     }
 }
 
@@ -19,7 +27,7 @@
         padding: 0.5em 1em;
         font-size: 1em;
     }
-    .attack, .special-attack, .heal, .give-up {
+    .button-action{
         color: $primary-color;
         display: none;
     }
