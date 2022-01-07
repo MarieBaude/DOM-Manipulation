@@ -15,6 +15,8 @@ buttonStart.addEventListener('click', function() {
     appearButton();
 });
 
+console.log(appearButton);
+
 
 /* FUNCTIONS 
 -----------------------------
@@ -22,8 +24,8 @@ buttonStart.addEventListener('click', function() {
 
 function appearButton () {
     buttonStart.style.display = 'none';
-    buttonAttack.style.display = 'inher';
-    buttonSpecialAttack.style.display = 'inher';
-    buttonHeal.style.display = 'inher';
-    buttonGiveUP.style.display = 'inher';
+    buttonAttack.style.display = 'inherit';
+    buttonSpecialAttack.style.display = 'inherit';
+    buttonHeal.style.display = 'inherit';
+    buttonGiveUP.style.display = 'inherit';
 }

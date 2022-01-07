@@ -23,6 +23,7 @@
     }
     .attack, .special-attack, .heal, .give-up {
         color: $primary-color;
+        display: none;
     }
     .new-start-monster {
         background: $button-start;
@@ -47,10 +48,9 @@
         }
     }
     .give-up {
-        background: $primary-color;
+        background: $button-give-up;
         &:hover {
-            background: $secondary-color;
-            color: $primary-color;
+            background: $button-give-up-hover;
         }
     }
 }
