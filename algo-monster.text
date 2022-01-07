@@ -1,0 +1,13 @@
+- faire apparaitre les 4 buttons actions après clique sur le bouton start
+
+- définir une class 'joueur' avec point de vie, attaque
+- ajouter une class 'toi' avec option attaque spécial et heal
+
+- écrire toute les actions dans une section
+
+- fonction avec bouton give up pour tout reset
+
+- 'monstre' fais des dégâts entre 5 et 10
+- 'toi' fais entre 3 et 10
+- 'toi' art spécial fais entre 10 et 20
+- heal de 10
