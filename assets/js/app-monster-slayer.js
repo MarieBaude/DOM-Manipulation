@@ -37,7 +37,14 @@ buttonAttack.addEventListener('click', function() {
 buttonSpecialAttack.addEventListener('click', function() {
     playerSpecialAttack();
     monsterAttack();
-    addLiPlayer();
+    addLiPlayerSpecial();
+    addLiMonster();
+});
+
+buttonHeal.addEventListener('click', function() {
+    playerHeal();
+    monsterAttack();
+    addLiPlayerHeal();
     addLiMonster();
 });
 
@@ -54,18 +61,6 @@ function appearButton () {
     sectionText.style.display = 'inherit';
 }
 
-function reset () {
-    buttonAttack.style.display = 'none';
-    buttonSpecialAttack.style.display = 'none';
-    buttonHeal.style.display = 'none';
-    buttonGiveUP.style.display = 'none';
-    sectionText.style.display = 'none';
-    buttonStart.style.display = 'inherit';
-    let playerHP = 100;
-    let monsterHP = 100;
-    console.log('player : ' + playerHP, 'monster : ' + monsterHP);
-}
-
 function playerAttack () {
     monsterHP -= getRandomNum(3, 10);
 }
@@ -78,6 +73,10 @@ function monsterAttack () {
     playerHP -= getRandomNum(5, 10);
 }
 
+function playerHeal () {
+    monsterHP += 10;
+}
+
 function getRandomNum(min, max) {
     min = Math.ceil(min);
     max = Math.floor(max);
@@ -88,11 +87,34 @@ function addLiPlayer () {
     let liPLayer = document.createElement('li.player-action');
     liPLayer.appendChild(document.createTextNode('Player hit monster for ' + playerHP));
     list.appendChild(liPLayer);
-
 }
 
 function addLiMonster () {
     let liMonster = document.createElement('li.monster-action');
     liMonster.appendChild(document.createTextNode('\n' + 'Monster hit player for ' + monsterHP));
     list.appendChild(liMonster);
+}
+
+function addLiPlayerSpecial () {
+    let liPLayerSpecial = document.createElement('li.player-action');
+    liPLayerSpecial.appendChild(document.createTextNode('Player hit hard monster for ' + playerHP));
+    list.appendChild(liPLayerSpecial);
+}
+
+function addLiPlayerHeal () {
+    let liPLayerHeal = document.createElement('li.player-action-heal');
+    liPLayerHeal.appendChild(document.createTextNode('Player heals for ' + playerHP));
+    list.appendChild(liPLayerHeal);
+}
+
+function reset () {
+    buttonAttack.style.display = 'none';
+    buttonSpecialAttack.style.display = 'none';
+    buttonHeal.style.display = 'none';
+    buttonGiveUP.style.display = 'none';
+    sectionText.style.display = 'none';
+    buttonStart.style.display = 'inherit';
+    let playerHP = 100;
+    let monsterHP = 100;
+    list.innerHTML = '';
 }
