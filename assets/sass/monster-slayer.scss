@@ -3,9 +3,9 @@
     justify-content: space-between;
     width: 29em;
     .you-life, .monster-life {
-        background: $heal;
+        background: $hp;
         width: 10em;
-        height: 4em;
+        height: 2.5em;
     }
 }
 
@@ -16,11 +16,41 @@
     border: solid $secondary-color 1px;
     width: 25em;
     padding: 2em;
-    .new-start-monster {
-        background: $button-start;
+    .button-monster-slayer {
         border: none;
-        color: $primary-color;
         padding: 0.5em 1em;
         font-size: 1em;
+    }
+    .attack, .special-attack, .heal, .give-up {
+        color: $primary-color;
+    }
+    .new-start-monster {
+        background: $button-start;
+        color: $primary-color;
+    }
+    .attack {
+        background: $button-attack;
+        &:hover {
+            background: $button-attack-hover;
+        }
+    }
+    .special-attack {
+        background: $button-speacial-attack;
+        &:hover {
+            background: $button-speacial-attack-hover;
+        }
+    }
+    .heal {
+        background: $button-heal;
+        &:hover {
+            background: $button-heal-hover;
+        }
+    }
+    .give-up {
+        background: $primary-color;
+        &:hover {
+            background: $secondary-color;
+            color: $primary-color;
+        }
     }
 }
