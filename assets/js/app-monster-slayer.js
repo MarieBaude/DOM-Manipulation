@@ -30,9 +30,16 @@ buttonGiveUP.addEventListener('click', function() {
 buttonAttack.addEventListener('click', function() {
     playerAttack();
     monsterAttack();
-    addLi();
+    addLiPlayer();
+    addLiMonster();
 });
 
+buttonSpecialAttack.addEventListener('click', function() {
+    playerSpecialAttack();
+    monsterAttack();
+    addLiPlayer();
+    addLiMonster();
+});
 
 /* FUNCTIONS 
 -----------------------------
@@ -63,6 +70,10 @@ function playerAttack () {
     monsterHP -= getRandomNum(3, 10);
 }
 
+function playerSpecialAttack () {
+    monsterHP -= getRandomNum(10, 20);
+}
+
 function monsterAttack () {
     playerHP -= getRandomNum(5, 10);
 }
@@ -73,10 +84,15 @@ function getRandomNum(min, max) {
     return Math.floor(Math.random() * (max - min +1)) + min;
 }
 
-function addLi () {
+function addLiPlayer () {
     let liPLayer = document.createElement('li.player-action');
     liPLayer.appendChild(document.createTextNode('Player hit monster for ' + playerHP));
     list.appendChild(liPLayer);
-    // li.appendChild(document.createTextNode('\n' + 'Monster hit player for ' + monsterHP));
-    // list.appendChild(li);
+
+}
+
+function addLiMonster () {
+    let liMonster = document.createElement('li.monster-action');
+    liMonster.appendChild(document.createTextNode('\n' + 'Monster hit player for ' + monsterHP));
+    list.appendChild(liMonster);
 }
