@@ -1,10 +1,10 @@
 /* VARIABLES
 -----------------------------
 */
-let list = document.querySelector('.shopping-list');
+const list = document.querySelector('.shopping-list');
 const buttonAdd = document.querySelector('.button-add');
 
-/* 
+/* EVENT
 -----------------------------
 */
 buttonAdd.addEventListener("click", function() {
