@@ -4,8 +4,9 @@
     width: 29em;
     .you-life, .monster-life {
         background: $hp;
-        width: 10em;
+        width: 13em;
         height: 2.5em;
+        transition: width 500ms;
     }
 }
 
@@ -55,4 +56,8 @@
 .text {
    @include section-style;
    display: none;
+   .action-list {
+        display: flex;
+        flex-direction: column;
+   }
 }
