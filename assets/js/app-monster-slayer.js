@@ -17,7 +17,6 @@ let playerHP = 100;
 let monsterHP = 100;
 
 
-
 /* EVENTS
 -----------------------------
 */
@@ -43,7 +42,6 @@ buttonSpecialAttack.addEventListener('click', function() {
     addLiPlayerSpecial();
     addLiMonster();
     checkWinner();
-    console.log('player : ' + playerHP, ' - monster : ' + monsterHP);
 });
 
 buttonHeal.addEventListener('click', function() {
@@ -131,4 +129,3 @@ function checkWinner () {
         alert('gagné');
     } 
 }
-

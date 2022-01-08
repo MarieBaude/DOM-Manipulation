@@ -1,12 +1,12 @@
 .pv {
     display: flex;
     justify-content: space-between;
-    width: 29em;
     position: relative;
-    .bar {
-        width: 13em;
+    div {
         height: 2.5em;
-        //transition: width 500ms;
+    }
+    .bar {
+        width: 100%;
     }
     .up-bar {
         background: $hp-bar;
