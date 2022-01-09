@@ -64,25 +64,18 @@ buttonHeal.addEventListener('click', function() {
 /* FUNCTIONS 
 -----------------------------
 */
-function appearButton () {
-    buttonStart.style.display = 'none';
-    buttonAttack.style.display = 'inherit';
-    buttonSpecialAttack.style.display = 'inherit';
-    buttonHeal.style.display = 'inherit';
-    buttonGiveUP.style.display = 'inherit';
-    sectionText.style.display = 'inherit';
+function playerHeal () {
+    playerHP += 10;
 }
 
 function updateSizeBarPlayer () {
-    let attackMonster = playerHP - monsterDamage;
-    playerBar.style.width = attackMonster + '%';
+    playerBar.style.width = playerHP + '%';
+    console.log(playerHP);
 }
 
 function updateSizeBarMonster () {
-    let attackPlayer = monsterHP - (playerDamage + playerSpeDamage);
-    monsterBar.style.width = attackPlayer + '%';
-    console.log(attackPlayer);
-    console.log(playerHP);
+    monsterBar.style.width = monsterHP + '%';
+    console.log(monsterHP);
 }
 
 function playerAttack () {
@@ -98,10 +91,6 @@ function playerSpecialAttack () {
 function monsterAttack () {
     monsterDamage = randomNum(5, 10);
     playerHP -= monsterDamage;
-}
-
-function playerHeal () {
-    playerHP += 10;
 }
 
 function addLiPlayer () {
@@ -144,12 +133,21 @@ function reset () {
 
 function checkWinner () {
     if (playerHP <= 0) {
-        confirm('Vous avez perdu');
+        confirm('Vous avez perdu.\nOk pour recommencer');
     } else if (monsterHP <= 0) {
-        confirm('Vous avez gagné');
+        confirm('Vous avez gagné !\nOk pour recommencer');
     }
 }
 
 function randomNum(min, max) {
     return Math.floor(Math.random() * (max - min +1)) + min;
+}
+
+function appearButton () {
+    buttonStart.style.display = 'none';
+    buttonAttack.style.display = 'inherit';
+    buttonSpecialAttack.style.display = 'inherit';
+    buttonHeal.style.display = 'inherit';
+    buttonGiveUP.style.display = 'inherit';
+    sectionText.style.display = 'inherit';
 }
