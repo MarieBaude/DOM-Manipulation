@@ -74,32 +74,29 @@ function appearButton () {
 }
 
 function updateSizeBarPlayer () {
-    let a = playerHP - monsterDamage;
-    playerBar.style.width = a + '%';
+    let attackMonster = playerHP - monsterDamage;
+    playerBar.style.width = attackMonster + '%';
 }
 
 function updateSizeBarMonster () {
-    let b = monsterHP - playerDamage;
-    let c = monsterHP - playerSpeDamage;
-    monsterBar.style.width = b + c + '%';
-    console.log(monsterHP);
-    console.log(b);
-    console.log(c);
-    console.log(playerDamage);
+    let attackPlayer = monsterHP - (playerDamage + playerSpeDamage);
+    monsterBar.style.width = attackPlayer + '%';
+    console.log(attackPlayer);
+    console.log(playerHP);
 }
 
 function playerAttack () {
-    playerDamage = Math.floor(Math.random() * (10 - 3 +1)) + 3;
+    playerDamage = randomNum(3, 10);
     monsterHP -= playerDamage;
 }
 
 function playerSpecialAttack () {
-    playerSpeDamage = Math.floor(Math.random() * (20 - 10 +1)) + 10;
+    playerSpeDamage = randomNum(10, 20);
     monsterHP -= playerSpeDamage;
 }
 
 function monsterAttack () {
-    monsterDamage = Math.floor(Math.random() * (10 - 5 +1)) + 5;
+    monsterDamage = randomNum(5, 10);
     playerHP -= monsterDamage;
 }
 
@@ -151,4 +148,8 @@ function checkWinner () {
     } else if (monsterHP <= 0) {
         confirm('Vous avez gagné');
     }
+}
+
+function randomNum(min, max) {
+    return Math.floor(Math.random() * (max - min +1)) + min;
 }
