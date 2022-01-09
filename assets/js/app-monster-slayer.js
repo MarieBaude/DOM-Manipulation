@@ -66,16 +66,15 @@ buttonHeal.addEventListener('click', function() {
 */
 function playerHeal () {
     playerHP += 10;
+    playerBar.style.width = playerHP + 10 + '%';
 }
 
 function updateSizeBarPlayer () {
     playerBar.style.width = playerHP + '%';
-    console.log(playerHP);
 }
 
 function updateSizeBarMonster () {
     monsterBar.style.width = monsterHP + '%';
-    console.log(monsterHP);
 }
 
 function playerAttack () {
