@@ -133,8 +133,10 @@ function reset () {
 function checkWinner () {
     if (playerHP <= 0) {
         confirm('Vous avez perdu.\nOk pour recommencer');
+        reset();
     } else if (monsterHP <= 0) {
         confirm('Vous avez gagné !\nOk pour recommencer');
+        reset();
     }
 }
 
