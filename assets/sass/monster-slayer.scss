@@ -1,20 +1,16 @@
 .pv {
     display: flex;
     justify-content: space-between;
-    position: relative;
+    width: 29em;
     div {
         height: 2.5em;
+        width: 13em;
     }
     .bar {
         width: 100%;
     }
     .up-bar {
         background: $hp-bar;
-        position: absolute;
-    }
-    .under-bar {
-        background: $under-bar;
-        z-index: 1;
     }
 }
 
